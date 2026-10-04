@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-button-size="standard">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Word board</title>
+  <meta name="description" content="Select words to build a message, with a pointer or a keyboard.">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Loaded in the head on purpose: it applies the saved button size before the first paint. -->
+  <script src="app.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Word board</h1>
+    <p class="intro">Select a word to add it to your message. Use a mouse or touch, or press Tab to move between words and Enter or Space to select one.</p>
+
+    <fieldset class="preference">
+      <legend>Button size</legend>
+      <label><input type="radio" name="button-size" value="standard"> Standard</label>
+      <label><input type="radio" name="button-size" value="large"> Large</label>
+      <label><input type="radio" name="button-size" value="x-large"> Extra large</label>
+    </fieldset>
+
+    <label class="message-label" for="message">Message</label>
+    <textarea id="message" rows="3" spellcheck="false"></textarea>
+
+    <section aria-labelledby="words-heading">
+      <h2 id="words-heading">Words</h2>
+      <div class="word-grid" id="words">
+        <button type="button">I</button>
+        <button type="button">you</button>
+        <button type="button">want</button>
+        <button type="button">need</button>
+        <button type="button">help</button>
+        <button type="button">water</button>
+        <button type="button">more</button>
+        <button type="button">stop</button>
+        <button type="button">yes</button>
+        <button type="button">no</button>
+        <button type="button">please</button>
+        <button type="button">thank you</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
